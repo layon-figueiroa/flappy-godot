@@ -29,6 +29,10 @@ func take_flight() -> void:
 		
 func detect_collision() -> void:
 	if get_slide_collision_count() > 0:
+		var collider = get_slide_collision(0).get_collider()
+		if collider.is_in_group("roof"):
+			return
+			
 		is_dead = true
 		die()
 		

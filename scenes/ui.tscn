@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4qa7kjttouqr"]
+[gd_scene load_steps=5 format=3 uid="uid://b4qa7kjttouqr"]
 
 [ext_resource type="Script" uid="uid://bm8qv6h4gb1vi" path="res://scripts/ui.gd" id="1_nt7q6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nt7q6"]
+size = Vector2(593, 20)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlq6p"]
 bg_color = Color(1, 1, 1, 1)
@@ -51,6 +54,12 @@ theme_override_font_sizes/font_size = 28
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Roof" type="StaticBody2D" parent="HUD" groups=["roof"]]
+
+[node name="Collision" type="CollisionShape2D" parent="HUD/Roof"]
+position = Vector2(286, -10)
+shape = SubResource("RectangleShape2D_nt7q6")
 
 [node name="GameOver" type="Control" parent="."]
 visible = false
