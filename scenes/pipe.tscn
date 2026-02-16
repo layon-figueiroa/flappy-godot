@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bav4b488h54vv"]
+
+[ext_resource type="Texture2D" uid="uid://dqk2bed0n3gqo" path="res://assets/Imaginative-Pipe-Flappy-Bird-Game-World-PNG-thumb-removebg-preview.png" id="1_8x3ej"]
+[ext_resource type="Script" uid="uid://c0fbpkhbi0odq" path="res://scripts/pipe.gd" id="1_arpqm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arpqm"]
+size = Vector2(58, 159)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8p0di"]
+size = Vector2(20, 89)
+
+[node name="Pipe" type="Node2D"]
+script = ExtResource("1_arpqm")
+
+[node name="TopPipe" type="StaticBody2D" parent="."]
+position = Vector2(-4, 65)
+
+[node name="Sprite" type="Sprite2D" parent="TopPipe"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8x3ej")
+
+[node name="Collision" type="CollisionShape2D" parent="TopPipe"]
+position = Vector2(4, -33.5)
+shape = SubResource("RectangleShape2D_arpqm")
+
+[node name="BottomPipe" type="StaticBody2D" parent="."]
+position = Vector2(5, 258)
+rotation = -3.1415927
+
+[node name="Sprite" type="Sprite2D" parent="BottomPipe"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8x3ej")
+
+[node name="Collision" type="CollisionShape2D" parent="BottomPipe"]
+position = Vector2(4, -33.5)
+shape = SubResource("RectangleShape2D_arpqm")
+
+[node name="ScoreArea" type="Area2D" parent="."]
+position = Vector2(-1, 162)
+
+[node name="Collision" type="CollisionShape2D" parent="ScoreArea"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_8p0di")
+
+[connection signal="body_entered" from="ScoreArea" to="." method="_on_score_area_body_entered"]
