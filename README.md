@@ -7,10 +7,7 @@ Neste jogo, você controla o ícone da Godot e precisa fazê-lo voar entre os ca
 
 ### 🎮 Como Jogar
 
-Barra de Espaço (Space) → Faz o personagem voar
-Desvie dos canos
-Cada vez que você passa por um conjunto de canos, sua pontuação aumenta
-
+Barra de Espaço (Space) → Faz o personagem voar / Desvie dos canos /Cada vez que você passa por um conjunto de canos, sua pontuação aumenta
 
 ### 🧠 Mecânicas do Jogo
 
