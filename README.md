@@ -25,7 +25,7 @@ GDScript
 
 ### 📦 Como Rodar o Projeto
 
-Clone o repositório: **git clone https://github.com/seu-usuario/flappy-godot.git**
+Clone o repositório: **git clone https://github.com/layon-figueiroa/flappy-godot.git**
 
 - Abra a Godot Engine
 - Clique em Import Project
