@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 @onready var game_over_panel: Control = $GameOver
-@onready var start_screen: Control = $StartScreen
 @onready var lbl_score: Label = $GameOver/VBoxContainer/MarginContainer/VBoxContainer/LblScore
 @onready var lbl_top_score: Label = $GameOver/VBoxContainer/MarginContainer/VBoxContainer/LblTopScore
 @onready var lbl_screen_score: Label = $HUD/MarginContainer/LblScore
