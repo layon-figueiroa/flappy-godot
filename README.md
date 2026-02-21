@@ -1,4 +1,5 @@
 ## **Flappy Godot**
+![Flappy Godot Gameplay](images/game.gif)
 
 Flappy Godot é um clone do clássico Flappy Bird, desenvolvido na Godot Engine.
 Neste jogo, você controla o ícone da Godot e precisa fazê-lo voar entre os canos sem colidir!
@@ -36,3 +37,7 @@ Clone o repositório: **git clone https://github.com/seu-usuario/flappy-godot.gi
 
   
 ### 📸 Screenshots
+
+<img src="images/start_screen.png" width="500"><br><br>
+<img src="images/game.png" width="500"><br><br>
+<img src="images/screen_game_over.png" width="500">
