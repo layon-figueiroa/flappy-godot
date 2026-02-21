@@ -6,6 +6,9 @@ extends CanvasLayer
 @onready var lbl_top_score: Label = $GameOver/VBoxContainer/MarginContainer/VBoxContainer/LblTopScore
 @onready var lbl_screen_score: Label = $HUD/MarginContainer/LblScore
 
+@onready var game_over_audio: AudioStreamPlayer = $Audio/GameOverAudio
+@onready var hover_audio: AudioStreamPlayer = $Audio/HoverAudio
+
 func _ready() -> void:
 	process_mode = PROCESS_MODE_ALWAYS
 	
@@ -13,6 +16,7 @@ func _ready() -> void:
 	GameManager.update_score.connect(change_score)
 	
 func show_game_over(score: int, top_score: int) -> void:
+	game_over_audio.play()
 	game_over_panel.visible = true
 	lbl_score.text = "Score: " + str(score)
 	lbl_top_score.text = "Top Score: " + str(top_score)
@@ -25,3 +29,9 @@ func _on_btn_retry_pressed() -> void:
 
 func _on_btn_main_menu_pressed() -> void:
 	GameManager.back_main_menu()
+
+func _on_btn_retry_mouse_entered() -> void:
+	hover_audio.play()
+
+func _on_btn_main_menu_mouse_entered() -> void:
+	hover_audio.play()

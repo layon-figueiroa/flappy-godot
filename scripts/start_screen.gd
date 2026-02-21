@@ -2,6 +2,8 @@ extends Control
 
 signal game_started
 
+@onready var hover_audio: AudioStreamPlayer = $Audio/HoverAudio
+
 func _ready() -> void:
 	process_mode = PROCESS_MODE_ALWAYS
 	
@@ -13,3 +15,10 @@ func _on_btn_start_game_pressed() -> void:
 
 func _on_btn_quit_game_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_btn_start_game_mouse_entered() -> void:
+	hover_audio.play()
+
+func _on_btn_quit_game_mouse_entered() -> void:
+	hover_audio.play()

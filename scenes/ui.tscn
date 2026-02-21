@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4qa7kjttouqr"]
+[gd_scene load_steps=7 format=3 uid="uid://b4qa7kjttouqr"]
 
 [ext_resource type="Script" uid="uid://bm8qv6h4gb1vi" path="res://scripts/ui.gd" id="1_nt7q6"]
+[ext_resource type="AudioStream" uid="uid://dvehkvyl21l0r" path="res://assets/sounds/lose.wav" id="2_x4jx1"]
+[ext_resource type="AudioStream" uid="uid://dve1q4vqkfpq8" path="res://assets/sounds/finger_click.wav" id="3_yev5y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nt7q6"]
 size = Vector2(593, 20)
@@ -144,5 +146,15 @@ theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_nt7q6")
 text = "Main Menu"
 
+[node name="Audio" type="Node" parent="."]
+
+[node name="GameOverAudio" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("2_x4jx1")
+
+[node name="HoverAudio" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("3_yev5y")
+
+[connection signal="mouse_entered" from="GameOver/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/BtnRetry" to="." method="_on_btn_retry_mouse_entered"]
 [connection signal="pressed" from="GameOver/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/BtnRetry" to="." method="_on_btn_retry_pressed"]
+[connection signal="mouse_entered" from="GameOver/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/BtnMainMenu" to="." method="_on_btn_main_menu_mouse_entered"]
 [connection signal="pressed" from="GameOver/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/BtnMainMenu" to="." method="_on_btn_main_menu_pressed"]

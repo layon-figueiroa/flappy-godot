@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bav4b488h54vv"]
+[gd_scene load_steps=6 format=3 uid="uid://bav4b488h54vv"]
 
 [ext_resource type="Texture2D" uid="uid://dqk2bed0n3gqo" path="res://assets/Imaginative-Pipe-Flappy-Bird-Game-World-PNG-thumb-removebg-preview.png" id="1_8x3ej"]
 [ext_resource type="Script" uid="uid://c0fbpkhbi0odq" path="res://scripts/pipe.gd" id="1_arpqm"]
+[ext_resource type="AudioStream" uid="uid://cmwciba58cwq0" path="res://assets/sounds/coin_2.wav" id="3_8p0di"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_arpqm"]
 size = Vector2(58, 159)
@@ -41,5 +42,10 @@ position = Vector2(-1, 162)
 [node name="Collision" type="CollisionShape2D" parent="ScoreArea"]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_8p0di")
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="AudioCoin" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("3_8p0di")
 
 [connection signal="body_entered" from="ScoreArea" to="." method="_on_score_area_body_entered"]

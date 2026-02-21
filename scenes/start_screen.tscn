@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://conohsaj2475y"]
+[gd_scene load_steps=5 format=3 uid="uid://conohsaj2475y"]
 
 [ext_resource type="Script" uid="uid://bdtl8rupgaqeo" path="res://scripts/start_screen.gd" id="1_tx5wa"]
+[ext_resource type="AudioStream" uid="uid://dve1q4vqkfpq8" path="res://assets/sounds/finger_click.wav" id="2_o7i0r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cllq7"]
 bg_color = Color(1, 1, 1, 1)
@@ -86,5 +87,12 @@ theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_tx5wa")
 text = "Quit Game"
 
+[node name="Audio" type="Node" parent="."]
+
+[node name="HoverAudio" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("2_o7i0r")
+
+[connection signal="mouse_entered" from="VBoxContainer/MarginContainer2/VBoxContainer/BtnStartGame" to="." method="_on_btn_start_game_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer2/VBoxContainer/BtnStartGame" to="." method="_on_btn_start_game_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/MarginContainer2/VBoxContainer/BtnQuitGame" to="." method="_on_btn_quit_game_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer2/VBoxContainer/BtnQuitGame" to="." method="_on_btn_quit_game_pressed"]

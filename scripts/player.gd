@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 signal died
 
+@onready var flight_audio: AudioStreamPlayer = $Audio/FlightAudio
+
 @export var flight_force: float = -300.0
 
 var death_limit: float = 340.0
@@ -26,6 +28,7 @@ func apply_gravity(delta: float) -> void:
 func take_flight() -> void:
 	if Input.is_action_just_pressed("fly"):
 		velocity.y = flight_force
+		flight_audio.play()
 		
 func detect_collision() -> void:
 	if get_slide_collision_count() > 0:

@@ -2,6 +2,8 @@ extends Node2D
 
 signal add_point
 
+@onready var audio_coin: AudioStreamPlayer = $Audio/AudioCoin
+
 @export var speed: float = 200.0
 @export var destroy_x: float = -100.0
 
@@ -21,4 +23,5 @@ func check_position() -> void:
 
 func _on_score_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
+		audio_coin.play()
 		emit_signal("add_point")

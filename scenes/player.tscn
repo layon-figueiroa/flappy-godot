@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bk0xn6guevtgp"]
+[gd_scene load_steps=5 format=3 uid="uid://bk0xn6guevtgp"]
 
 [ext_resource type="Script" uid="uid://dja1kj4jfla7q" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://elokegx3f3vf" path="res://assets/icon.svg" id="2_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://dk4g1hfid4aie" path="res://assets/sounds/jump_short.wav" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(28, 28)
@@ -15,3 +16,8 @@ texture = ExtResource("2_qhqgy")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dqkch")
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="FlightAudio" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("3_qhqgy")
