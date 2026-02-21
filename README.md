@@ -11,15 +11,15 @@ Barra de Espaço (Space) → Faz o personagem voar / Desvie dos canos /Cada vez 
 
 ### 🧠 Mecânicas do Jogo
 
-Sistema de física com gravidade
-Geração procedural de canos
-Sistema de pontuação
+Sistema de física com gravidade<br>
+Geração procedural de canos<br>
+Sistema de pontuação<br>
 Detecção de colisão
 
 
 ### 🛠️ Tecnologias Utilizadas
 
-**Godot Engine 4.x**
+**Godot Engine 4.x**<br>
 GDScript
 
 
