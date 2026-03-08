@@ -1,40 +1,57 @@
-## **Flappy Godot**
+# 🐦 Flappy Godot
+
+![Godot](https://img.shields.io/badge/Engine-Godot%204-blue)
+![Language](https://img.shields.io/badge/Language-GDScript-purple)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 ![Flappy Godot Gameplay](images/game.gif)
 
-Flappy Godot é um clone do clássico Flappy Bird, desenvolvido na Godot Engine.
+**Flappy Godot** é um clone do clássico **Flappy Bird**, desenvolvido utilizando a **Godot Engine**.  
 Neste jogo, você controla o ícone da Godot e precisa fazê-lo voar entre os canos sem colidir!
 
+---
 
-### 🎮 Como Jogar
+# 🎮 Como Jogar
 
-Barra de Espaço (Space) → Faz o personagem voar / Desvie dos canos /Cada vez que você passa por um conjunto de canos, sua pontuação aumenta
+| Tecla | Ação |
+|------|------|
+| **Barra de Espaço (Space)** | Faz o personagem voar |
 
-### 🧠 Mecânicas do Jogo
+🎯 **Objetivo:**  
+Desvie dos canos e tente sobreviver o máximo possível.
 
-Sistema de física com gravidade<br>
-Geração procedural de canos<br>
-Sistema de pontuação<br>
-Detecção de colisão
+Cada vez que você passa por um conjunto de canos, **sua pontuação aumenta**.
 
+---
 
-### 🛠️ Tecnologias Utilizadas
+# 🧠 Mecânicas do Jogo
 
-**Godot Engine 4.x**<br>
-GDScript
+- Sistema de **física com gravidade**
+- **Geração procedural de canos**
+- **Sistema de pontuação**
+- **Detecção de colisão**
 
+---
 
-### 📦 Como Rodar o Projeto
+# 🛠️ Tecnologias Utilizadas
 
-Clone o repositório: **git clone https://github.com/layon-figueiroa/flappy-godot.git**
+- **Godot Engine 4.x**
+- **GDScript**
 
-- Abra a Godot Engine
-- Clique em Import Project
-- Selecione a pasta do projeto
-- Clique em Run ▶️
+---
 
-  
-### 📸 Screenshots
+# 📸 Screenshots
 
 <img src="images/start_screen.png" width="500"><br><br>
 <img src="images/game.png" width="500"><br><br>
 <img src="images/screen_game_over.png" width="500">
+
+---
+
+# 📦 Como Rodar o Projeto
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/layon-figueiroa/flappy-godot.git
